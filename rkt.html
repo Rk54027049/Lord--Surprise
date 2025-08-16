@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise Video</title>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #121212;
+      font-family: Arial, sans-serif,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .card {
+      background: #1e1e1e;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      padding: 30px;
+      text-align: center;
+      width: 100%;
+      max-width: 500px;
+      color: white;
+    }
+
+    button {
+      
+     padding: 15px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 18px;
+      cursor: pointer;
+      background: #1DB954;
+      color: white;
+      transition: 0.3s;
+    }
+
+    button:hover {
+        margin-bottom: 15px;
+      background: #4717a7;
+    }
+
+    /* By default video hidden */
+    video {
+      display: none;
+      margin-top: 20px;
+      width: 100%;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+       
+
+ 
+  
+    
+     
+    <div class="card" >
+         
+    <h2 >🎁Just Feel The Lord Krishna!</h2>
+    <!-- Hidden Video -->
+    <video id="video" controls>
+        
+      <source src="prabhuji.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+   
+  </div>
+<button onclick="playSurprise()"><b><i>Tap to Play.</i></b>!</button><br>
+  <script>
+    function playSurprise() {
+      let video = document.getElementById("video");
+      video.style.display = "block"; // Show video
+      video.play(); // Play video
+    }
+  </script>
+  
+</body>
+</html>
