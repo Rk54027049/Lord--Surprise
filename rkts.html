@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise Video</title>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      min-height: 100vh;
+      background: #121212;
+      font-family: Arial, sans-serif,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .card {
+      background: #1e1e1e;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+      max-width: 500px;
+      color: white;
+    }
+
+    /* Animated Heading */
+    .card h2 {
+      font-size: 22px;
+      color: #ced6d6;
+      margin-bottom: 15px;
+      animation: moveText 3s infinite ease-in-out;
+    }
+
+    /* Keyframes for smooth left-right movement */
+    @keyframes moveText {
+      0%   { transform: translateX(0); }
+      25%  { transform: translateX(10px); }
+      50%  { transform: translateX(0); }
+      75%  { transform: translateX(-10px); }
+      100% { transform: translateX(0); }
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 18px;
+      cursor: pointer;
+      background: #7ba68a;
+      color: rgb(57, 17, 137);
+      transition: 0.3s;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background: #c58008;
+    }
+
+    /* By default video hidden */
+    video {
+      display: none;
+      margin-top: 20px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    /* Responsive adjustments for small screens */
+    @media (max-width: 600px) {
+      .card {
+        padding: 15px;
+      }
+
+      .card h2 {
+        font-size: 20px;
+      }
+
+      button {
+        font-size: 16px;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Just Feel The Lord Krishna!</h2>
+    <!-- Hidden Video -->
+    <video id="video" controls>
+      <source src="prabhuji.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Button inside card -->
+    <button id="playBtn" onclick="playSurprise()"><b><i>Tap to Play</i></b>!</button>
+  </div>
+
+  <script>
+    function playSurprise() {
+      let video = document.getElementById("video");
+      let button = document.getElementById("playBtn");
+      
+      video.style.display = "block"; // Show video
+      video.play(); // Play video
+      button.style.display = "none"; // Hide button after play
+    }
+  </script>
+</body>
+</html>
